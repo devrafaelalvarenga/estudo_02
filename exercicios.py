@@ -2,8 +2,8 @@
 
 # 1. Escreva um programa que soma dois números inteiros inseridos pelo usuário.
 """
-num_1 = int(input('Insira o primeiro numero: '))
-num_2 = int(input('Insira o segundo numero: '))
+num_1 = int(input('Insira o primeiro numero inteiro: '))
+num_2 = int(input('Insira o segundo numero inteiro: '))
 soma = num_1 + num_2
 print(f'{num_1} + {num_2} = {soma}')
 """
@@ -11,30 +11,30 @@ print(f'{num_1} + {num_2} = {soma}')
 # 2. Crie um programa que receba um número do usuário e calcule o resto da divisão desse número por 5.
 """
 divisor = 5
-num_1 = int(input('Insira o primeiro numero: '))
+num_1 = float(input('Insira o primeiro numero: '))
 resto_divisao = num_1 % 5
 print(f'O resto da divisão de {num_1} / {divisor} = {resto_divisao}')
 """
 
 # 3. Desenvolva um programa que multiplique dois números fornecidos pelo usuário e mostre o resultado.
 '''
-num_1 = int(input('Insira o primeiro numero: '))
-num_2 = int(input('Insira o segundo numero: '))
+num_1 = float(input('Insira o primeiro numero: '))
+num_2 = float(input('Insira o segundo numero: '))
 multiplicacao = num_1 * num_2
 print(f'{num_1} * {num_2} = {multiplicacao}')
 '''
 
 # 4. Faça um programa que peça dois números inteiros e imprima a divisão inteira do primeiro pelo segundo.
 """
-num_1 = int(input('Insira o primeiro numero: '))
-num_2 = int(input('Insira o segundo numero: '))
-divisao = num_1 / num_2
+num_1 = int(input('Insira o primeiro numero inteiro: '))
+num_2 = int(input('Insira o segundo numero inteiro: '))
+divisao = num_1 // num_2
 print(f'{num_1} / {num_2} = {divisao}')
 """
 
 # 5. Escreva um programa que calcule o quadrado de um número fornecido pelo usuário.
 '''
-num_1 = int(input('Insira o primeiro numero: '))
+num_1 = float(input('Insira o primeiro numero: '))
 quadrado = num_1 ** 2
 print(f'{num_1} ** 2 = {quadrado}')
 '''
@@ -76,10 +76,12 @@ print(f'A conversão de {celcius}°C para °F é: {fahrenheit} ')
 # 10. Escreva um programa que calcule a área de um círculo, recebendo o raio como entrada.
 # formula: A = π·r2, se se conhece o raio r;
 '''
-pi = 3.14
+import math
+
+#pi = 3.14
 raio = int(input('Informe o raio para o calculo da area do circulo: '))
-area = pi * (raio ** 2)
-print(area)
+area = math.pi * (raio ** 2)
+print(f'{area:.2f}')
 '''
 
 # #### Strings (`str`)
@@ -113,7 +115,15 @@ dia = data[0:2]
 mes = data[3:5]
 ano = data[6:10]
 print(f'dia:{dia}, mes:{mes}, ano:{ano}')
+
+or 
+
+data = input('Digite uma data no formato dd/mm/aaaa: ')
+data = data.split("/") 
+#print(data)
+print(f'Dia: {data[0]}, Mes: {data[1]}, Ano: {data[2]}')
 """
+
 
 # 15. Escreva um programa que concatene duas strings fornecidas pelo usuário.
 '''
@@ -126,6 +136,7 @@ print(nome_completo)
 
 # 16. Escreva um programa que avalie duas expressões booleanas inseridas pelo usuário e retorne o resultado da operação AND entre elas.
 # 17. Crie um programa que receba dois valores booleanos do usuário e retorne o resultado da operação OR.
+
 # 18. Desenvolva um programa que peça ao usuário para inserir um valor booleano e, em seguida, inverta esse valor.
 '''
 valor_booleano = input('Insira um valor booleano True or False: ')
@@ -136,17 +147,24 @@ elif valor_booleano == 'False':
 '''
 
 # 19. Faça um programa que compare se dois números fornecidos pelo usuário são iguais.
-
+'''
 num_1 = int(input('Insira o primeiro numero: '))
 num_2 = int(input('Insira o segundo numero: '))
 if num_1 == num_2:
     print('Numeros são iguais')
 else:
     print('Numeros são diferentes')    
-
+'''
 
 # 20. Escreva um programa que verifique se dois números fornecidos pelo usuário são diferentes.
-
+'''
+num_1 = int(input('Insira o primeiro numero: '))
+num_2 = int(input('Insira o segundo numero: '))
+if num_1 == num_2:
+    print('Numeros são iguais')
+else:
+    print('Numeros são diferentes')    
+'''
 # #### try-except e if
 
 # 21: Conversor de Temperatura
