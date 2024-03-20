@@ -14,10 +14,10 @@ from unicodedata import normalize
 
 try:
     string = input('Digite uma palavra ou frase e verifique se ela é um palíndromo: ')
-    string_formatada =  normalize('NFKD', string).encode('ASCII','ignore').decode('ASCII').replace(' ', '').lower() #retira acentos, espaços e tranforma em minuscula
-    #string = 123456
+    #string = 12345 
     if isinstance(string, str):
-        string_palindromo = string_formatada[::-1].lower() #inverte string e tranforma em minuscula
+        string_formatada =  normalize('NFKD', string).encode('ASCII','ignore').decode('ASCII').replace(' ', '').lower()
+        string_palindromo = string_formatada[::-1].lower() 
         if string_formatada == string_palindromo:
             print(f'A string {string.upper()} é um palíndromo.')     
         else:
@@ -25,5 +25,5 @@ try:
     else:
         print('Verifique a string informada')         
 except ValueError:
-    print('Verifique o valor informado')
+    print('Verifique os dados informados')
 
